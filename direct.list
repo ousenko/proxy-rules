@@ -62,14 +62,15 @@ IP-CIDR,204.246.0.0/22
 IP-CIDR,205.251.192.0/22
 IP-CIDR,216.137.32.0/19
 
-# mail servers
-DOMAIN-SUFFIX,gmail.com
-DOMAIN-SUFFIX,yahoo.com
-DOMAIN-SUFFIX,outlook.com
-DOMAIN-SUFFIX,mail.ru
-DOMAIN-SUFFIX,yandex.ru
-DOMAIN-SUFFIX,aol.com
-DOMAIN-SUFFIX,icloud.com
+# mail rules
+PORT,25,DIRECT
+PORT,465,DIRECT
+PORT,587,DIRECT
+DOMAIN-SUFFIX,smtp.mail.me.com,DIRECT  # iCloud SMTP
+DOMAIN-SUFFIX,smtp.yandex.ru,DIRECT   # Yandex SMTP
+DOMAIN-SUFFIX,smtp.mail.ru,DIRECT     # Mail.ru SMTP
+DOMAIN-SUFFIX,smtp.gmail.com,DIRECT   # Gmail SMTP
+DOMAIN-SUFFIX,smtp.outlook.com,DIRECT # Outlook/Hotmail SMTP
 
 
 IP-CIDR,74.125.0.0/16  # Gmail
@@ -78,13 +79,5 @@ IP-CIDR,40.100.0.0/16  # Outlook/Hotmail
 IP-CIDR,87.250.250.0/24  # Yandex Mail
 IP-CIDR,217.69.139.0/24  # Mail.ru
 
-PORT,25  # SMTP (отправка)
-PORT,465  # SMTP с SSL/TLS
-PORT,587  # SMTP с STARTTLS
-PORT,993  # IMAP с SSL/TLS
-PORT,143  # IMAP без шифрования
-PORT,110  # POP3 без шифрования
-PORT,995  # POP3 с SSL/TLS
-
-DOMAIN-KEYWORD,smtp
-DOMAIN-KEYWORD,imap
+DOMAIN-KEYWORD,smtp,DIRECT
+DOMAIN-KEYWORD,imap,DIRECT
