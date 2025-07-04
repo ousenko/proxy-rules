@@ -4,15 +4,8 @@ IP-CIDR,10.0.0.0/8
 IP-CIDR,172.16.0.0/12
 IP-CIDR,127.0.0.0/8
 
-# some direct urls
-DOMAIN-SUFFIX,google.com
-DOMAIN-SUFFIX,boosty.to
-DOMAIN-SUFFIX,mycdn.me
-DOMAIN,fstravel.com
-DOMAIN,level.travel
-DOMAIN,duckduckgo.com
 # ru
-DOMAIN-SUFFIX,ru
+DOMAIN-SUFFIX,.ru
 DOMAIN-SUFFIX,.su
 DOMAIN-SUFFIX,.рф
 DOMAIN-KEYWORD,yandex
@@ -42,36 +35,15 @@ IP-CIDR,2001:B28:F23F::/48
 IP-CIDR,2A0A:F280::/32
 IP-CIDR,2001:67C:4E8::/48
 
-#aws 
-DOMAIN-SUFFIX,amazonaws.com
-DOMAIN-SUFFIX,aws.amazon.com
-DOMAIN-SUFFIX,cloudfront.net
-DOMAIN-SUFFIX,s3.amazonaws.com
-DOMAIN-SUFFIX,dynamodb.amazonaws.com
-DOMAIN-SUFFIX,ec2.amazonaws.com
-DOMAIN-SUFFIX,lambda.amazonaws.com
-DOMAIN-SUFFIX,rds.amazonaws.com
-DOMAIN-SUFFIX,sts.amazonaws.com
-DOMAIN-SUFFIX,elasticbeanstalk.com
-IP-CIDR,3.0.0.0/8
-IP-CIDR,13.0.0.0/8
-IP-CIDR,52.0.0.0/8
-IP-CIDR,54.0.0.0/8
-IP-CIDR,99.0.0.0/8
-IP-CIDR,150.222.0.0/16
-IP-CIDR,204.246.0.0/22
-IP-CIDR,205.251.192.0/22
-IP-CIDR,216.137.32.0/19
-
 # mail rules
-PORT,25,DIRECT
-PORT,465,DIRECT
-PORT,587,DIRECT
-DOMAIN-SUFFIX,smtp.mail.me.com,DIRECT  # iCloud SMTP
-DOMAIN-SUFFIX,smtp.yandex.ru,DIRECT   # Yandex SMTP
-DOMAIN-SUFFIX,smtp.mail.ru,DIRECT     # Mail.ru SMTP
-DOMAIN-SUFFIX,smtp.gmail.com,DIRECT   # Gmail SMTP
-DOMAIN-SUFFIX,smtp.outlook.com,DIRECT # Outlook/Hotmail SMTP
+PORT,25
+PORT,465
+PORT,587
+DOMAIN-SUFFIX,smtp.mail.me.com  # iCloud SMTP
+DOMAIN-SUFFIX,smtp.yandex.ru   # Yandex SMTP
+DOMAIN-SUFFIX,smtp.mail.ru     # Mail.ru SMTP
+DOMAIN-SUFFIX,smtp.gmail.com   # Gmail SMTP
+DOMAIN-SUFFIX,smtp.outlook.com # Outlook/Hotmail SMTP
 
 
 IP-CIDR,74.125.0.0/16  # Gmail
@@ -80,5 +52,5 @@ IP-CIDR,40.100.0.0/16  # Outlook/Hotmail
 IP-CIDR,87.250.250.0/24  # Yandex Mail
 IP-CIDR,217.69.139.0/24  # Mail.ru
 
-DOMAIN-KEYWORD,smtp,DIRECT
-DOMAIN-KEYWORD,imap,DIRECT
+DOMAIN-KEYWORD,smtp
+DOMAIN-KEYWORD,imap
